@@ -1,7 +1,7 @@
 #!/bin/bash
-sed -i "/%wheel ALL=(ALL) ALL/s/^#//g" /mnt/etc/sudoers && \
-sed -i "/%wheel ALL=(ALL) NOPASSWD: ALL/d" /mnt/etc/sudoers && \
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /mnt/etc/sudoers && \
-sed -i "/^MODULES=/c\MODULES=(ext4)" /mnt/etc/mkinitcpio.conf && \
-sed -i "/^HOOKS=/s/filesystems/encrypt filesystems/" /mnt/etc/mkinitcpio.conf && \
-arch-chroot /mnt mkinitcpio -p linux
+sed -i "/%wheel ALL=(ALL) ALL/s/^#//g" /etc/sudoers && \
+sed -i "/%wheel ALL=(ALL) NOPASSWD: ALL/d" /etc/sudoers && \
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+sed -i "/^MODULES=/c\MODULES=(ext4)" /etc/mkinitcpio.conf && \
+sed -i "/^HOOKS=/s/filesystems/encrypt filesystems/" /etc/mkinitcpio.conf && \
+mkinitcpio -p linux

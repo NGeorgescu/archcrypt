@@ -1,4 +1,7 @@
 #!/bin/bash
-arch-chroot /mnt passwd && \
-arch-chroot /mnt useradd -m -g users -G wheel,video john && \
-arch-chroot /mnt passwd john
+
+# replace nsg with your name
+
+passwd && \
+useradd -m -g users -G wheel,video nsg && \
+passwd nsg 

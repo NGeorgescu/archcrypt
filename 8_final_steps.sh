@@ -1,4 +1,4 @@
 #!/bin/bash
-arch-chroot /mnt exit && \
+exit && \
 umount -R /mnt && \
 shutdown -r now
