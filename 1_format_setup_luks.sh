@@ -10,3 +10,6 @@ cryptsetup luksDump "$part2" && \
 cryptsetup luksHeaderBackup "$part2" --header-backup-file "luks_header_backup_$(date +%Y-%m-%d)" && \
 cryptsetup luksOpen "$part2" cryptroot && \
 mkfs.ext4 /dev/mapper/cryptroot
+mount /dev/mapper/cryptroot /mnt && \
+mkdir -p /mnt/boot && \
+mount "$part1" /mnt/boot
