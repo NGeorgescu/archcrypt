@@ -12,4 +12,4 @@ EOF
 
 # Re-run gdisk to create new partitions
 echo -e "o\nY\nn\n\n\n+1G\nEF00\nn\n\n\n\n8300\nw\nY" | gdisk "$dev"
-echo "$dev" > /tmp/partition_device
+echo "$dev" > ./partition_device

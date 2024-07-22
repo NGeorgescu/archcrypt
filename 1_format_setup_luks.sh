@@ -1,5 +1,5 @@
 #!/bin/bash
-dev=$(cat /tmp/partition_device)
+dev=$(cat ./partition_device)
 [ -z "$dev" ] && { echo "No device specified"; exit 1; }
 part1=$(ls ${dev}* | grep -E "${dev}p?1$")
 part2=$(ls ${dev}* | grep -E "${dev}p?2$")
