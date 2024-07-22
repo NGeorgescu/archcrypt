@@ -58,3 +58,5 @@ mkinitcpio -P
 
 echo "Swap file of size ${swap_size}MB created and system configured for hibernation."
 echo "Please reboot to ensure changes take effect."
+
+echo "success"

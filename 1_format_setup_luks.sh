@@ -13,3 +13,5 @@ mkfs.ext4 /dev/mapper/cryptroot
 mount /dev/mapper/cryptroot /mnt && \
 mkdir -p /mnt/boot && \
 mount "$part1" /mnt/boot
+
+echo "success"

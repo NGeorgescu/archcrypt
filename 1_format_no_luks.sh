@@ -9,3 +9,5 @@ mkfs.ext4 "$part2"
 mount "$part2" /mnt && \
 mkdir -p /mnt/boot && \
 mount "$part1" /mnt/boot
+
+echo "success"
