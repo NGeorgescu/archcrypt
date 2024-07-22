@@ -8,4 +8,4 @@ mkfs.fat -F32 "$part1" && \
 mkfs.ext4 "$part2"
 mount "$part2" /mnt && \
 mkdir -p /mnt/boot && \
-mount "${dev}1" /mnt/boot
+mount "$part1" /mnt/boot
