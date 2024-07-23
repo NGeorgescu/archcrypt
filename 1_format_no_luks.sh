@@ -7,7 +7,7 @@ part2=$(ls ${dev}* | grep -E "${dev}p?2$")
 mkfs.fat -F32 "$part1" && \
 mkfs.ext4 "$part2"
 mount "$part2" /mnt && \
-mkdir -p /mnt/boot && \
-mount "$part1" /mnt/boot
+mkdir -p /mnt/boot/efi && \
+mount "$part1" /mnt/boot/efi
 
 echo "success"
