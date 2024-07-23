@@ -8,4 +8,3 @@ mkdir -p /mnt/root/ && \
 cp *.sh /mnt/root/ && \
 echo "success"
 arch-chroot /mnt /bin/bash -c "cd /root; exec /bin/bash"
-

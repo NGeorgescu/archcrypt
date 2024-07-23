@@ -1,4 +1,5 @@
 #!/bin/bash
-exit && \
+# after exiting
+swapoff /mnt/swapfile && \
 umount -R /mnt && \
 shutdown -r now
