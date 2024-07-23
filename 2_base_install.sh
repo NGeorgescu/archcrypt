@@ -6,6 +6,6 @@ genfstab -pU /mnt >> /mnt/etc/fstab && \
 # genfstab -pU /mnt >> /mnt/etc/fstab
 mkdir -p /mnt/root/ && \
 cp *.sh /mnt/root/ && \
-arch-chroot /mnt /bin/bash
-
 echo "success"
+arch-chroot /mnt /bin/bash -c "cd /root; exec /bin/bash"
+
