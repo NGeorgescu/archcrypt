@@ -9,5 +9,4 @@ hwclock --systohc && \
 locale-gen && \
 sed -i "/%wheel ALL=(ALL) ALL/s/^#//g" /etc/sudoers && \
 sed -i "/%wheel ALL=(ALL) NOPASSWD: ALL/d" /etc/sudoers && \
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
 echo "success"
